@@ -77,7 +77,7 @@ const Hero = () => {
               className="text-5xl md:text-7xl font-bold text-foreground mb-4 leading-tight"
             >
               Hi, I'm{" "}
-              <span className="gradient-text-green">Najam</span>
+              <span className="gradient-text-green">Syed Muhammad Jaffar Tayyar</span>
             </motion.h1>
 
             <motion.div

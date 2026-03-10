@@ -45,7 +45,7 @@ const About = () => {
               <div className="space-y-4 font-mono text-sm leading-relaxed">
                 <p className="text-muted-foreground">
                   <span className="text-primary"># </span>
-                  <span className="text-foreground font-semibold">Hello, I'm Najam Ali Abass</span>
+                  <span className="text-foreground font-semibold">Hello, I'm Syed Muhammad Jaffar Tayyar</span>
                 </p>
                 <p className="text-muted-foreground">
                   Project management professional with 2+ years of experience supporting

@@ -33,7 +33,7 @@ const Navbar = () => {
         <a href="#" className="flex items-center gap-2 group">
           <Github className="w-8 h-8 text-foreground group-hover:text-primary transition-colors" />
           <span className="font-mono font-semibold text-foreground">
-            najam<span className="text-primary">.portfolio</span>
+            Jaffar<span className="text-primary">.portfolio</span>
           </span>
         </a>
 
