@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, GitBranch, Terminal } from "lucide-react";
 
-const roles = ["Project Manager", "Business Analyst", "Technical Product Strategist", "Open Source Maintainer"];
+const roles = ["Energetic Leader", "AI/ML Enthusiast", "Developer",];
 
 const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -76,7 +76,7 @@ const Hero = () => {
               className="text-5xl md:text-7xl font-bold text-foreground mb-4 leading-tight"
             >
               Hi, I'm{" "}
-              <span className="gradient-text-green">Syed Muhammad Jaffar Tayyar</span>
+              <span className="gradient-text-green">Syed Muhammad Jaffar</span>
             </motion.h1>
 
             <motion.div
@@ -131,9 +131,9 @@ const Hero = () => {
               className="flex gap-8 mt-12"
             >
               {[
-                { value: "10+", label: "Projects Delivered" },
-                { value: "6", label: "Ongoing Projects" },
-                { value: "2+", label: "Years Exp" },
+                { value: "3+", label: "Projects Delivered" },
+                { value: "2", label: "Ongoing Projects" },
+                { value: "2", label: "Years in tech\nas a Student" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="text-2xl font-bold text-foreground">{stat.value}</div>
@@ -153,7 +153,7 @@ const Hero = () => {
             <div className="github-card p-6">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-sm font-mono text-muted-foreground">
-                  100+ repositories and global open-source collaborations
+                  Tech Enthusiast, Fast learner and Effective Leader
                 </span>
               </div>
               <div className="flex gap-[3px] overflow-hidden">

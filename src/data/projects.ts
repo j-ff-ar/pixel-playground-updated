@@ -4,89 +4,42 @@ export interface Project {
   description: string;
   language: string;
   languageColor: string;
-  stars: number;
-  forks: number;
   tags: string[];
-  link: string;
   image?: string;
 }
 
 export const projects: Project[] = [
   {
     id: 1,
-    title: "ai-code-reviewer",
-    description: "An intelligent code review tool powered by machine learning that analyzes pull requests and suggests improvements.",
-    language: "TypeScript",
+    title: "House Price Predictor",
+    description: "An intelligent Web app which can predict the price of houses based on specific features.",
+    language: "Flask , PostgreSQL and ML",
     languageColor: "hsl(212, 92%, 67%)",
-    stars: 1243,
-    forks: 189,
-    tags: ["AI", "DevTools", "TypeScript"],
-    link: "#",
+    tags: ["ML", "DevTools", "FLASK"],
   },
   {
     id: 2,
-    title: "cloud-deploy-cli",
-    description: "A CLI tool for seamless cloud deployments across AWS, GCP, and Azure with zero-config setup.",
-    language: "Go",
-    languageColor: "hsl(194, 66%, 61%)",
-    stars: 876,
-    forks: 124,
-    tags: ["CLI", "Cloud", "DevOps"],
-    link: "#",
+    title: "Smart Invoice Generator",
+    description: "A web application for generating invoices automatically based on user input and predefined data.",
+    language: "HTML, CSS and JS and MySQL",
+    languageColor: "hsl(73, 66%, 61%)",
+    tags: ["Web App", "Invoice", "Automation"],
   },
   {
     id: 3,
-    title: "react-motion-kit",
-    description: "A comprehensive animation library for React with GPU-accelerated transitions and gesture support.",
-    language: "TypeScript",
+    title: "Emergency Routing System",
+    description: "A Simple model which can help in emergency situations, works without internet.",
+    language: "C++",
     languageColor: "hsl(212, 92%, 67%)",
-    stars: 2341,
-    forks: 312,
-    tags: ["React", "Animation", "UI"],
-    link: "#",
+    tags: ["C++", "Routing", "Emergency Response"],
   },
   {
     id: 4,
-    title: "data-pipeline-engine",
-    description: "High-performance data processing engine with support for real-time streaming and batch operations.",
-    language: "Rust",
-    languageColor: "hsl(28, 90%, 55%)",
-    stars: 567,
-    forks: 78,
-    tags: ["Data", "Backend", "Performance"],
-    link: "#",
+    title: "Banking System",
+    description: "A simple banking system that allows users to create accounts, perform transactions, and manage their finances securely.",
+    language: "Java",
+    languageColor: "hsl(19, 94%, 45%)",
+    tags: ["JAVA", "Backend", "GUI"],
   },
-  {
-    id: 5,
-    title: "design-system-core",
-    description: "A modular design system with accessible components, theming support, and comprehensive documentation.",
-    language: "TypeScript",
-    languageColor: "hsl(212, 92%, 67%)",
-    stars: 1890,
-    forks: 256,
-    tags: ["Design", "Components", "A11y"],
-    link: "#",
-  },
-  {
-    id: 6,
-    title: "api-gateway-proxy",
-    description: "Lightweight API gateway with rate limiting, caching, and automatic load balancing capabilities.",
-    language: "Go",
-    languageColor: "hsl(194, 66%, 61%)",
-    stars: 432,
-    forks: 67,
-    tags: ["API", "Microservices", "Backend"],
-    link: "#",
-  },
-  {
-    id: 7,
-    title: "campus-hive-rag-assistant",
-    description: "A multi-agent RAG-based intelligent assistant designed for university operations, supporting students, faculty, and admin workflows.",
-    language: "Python",
-    languageColor: "hsl(48, 96%, 56%)",
-    stars: 0,
-    forks: 0,
-    tags: ["RAG", "Agentic AI", "Product Strategy"],
-    link: "#",
-  },
+  
 ];
