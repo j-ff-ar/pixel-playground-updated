@@ -19,7 +19,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     company: "",
     role: "Coming Soon",
     period: "",
