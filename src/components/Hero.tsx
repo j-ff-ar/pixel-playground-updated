@@ -75,8 +75,8 @@ const Hero = () => {
               transition={{ delay: 0.3 }}
               className="text-5xl md:text-7xl font-bold text-foreground mb-4 leading-tight"
             >
-              Hi, I'm{" "}
-              <span className="gradient-text-green">Syed Muhammad Jaffar</span>
+              <small>Hi, I'm</small>{" "}
+              <span className="gradient-text-green"><small>Syed Muhammad Jaffar Tayyar</small></span>
             </motion.h1>
 
             <motion.div
@@ -98,8 +98,8 @@ const Hero = () => {
               transition={{ delay: 0.5 }}
               className="text-lg text-muted-foreground max-w-md mb-8 leading-relaxed"
             >
-              I manage products from idea to deployment, translating business needs
-              into clear roadmaps, user stories, and high-quality software delivery.
+              I develop projects from idea to deployment, turning concepts into functional web
+              and AI-based applications using modern technologies like Flask, JavaScript, and Python integrated with Database.
             </motion.p>
 
             <motion.div

@@ -29,6 +29,46 @@ To publish your profile publicly for free, follow:
 
 - [Netlify Deployment Guide](./NETLIFY_DEPLOYMENT.md)
 
+## Contact Form Gmail Setup
+
+The contact form now posts to a local Node mail server that sends mail through Gmail SMTP.
+
+1. Turn on 2-Step Verification for your Gmail account.
+2. Generate a Gmail App Password for Mail.
+3. Create a `.env` file in the project root using `.env.example`.
+4. Add your Gmail address and app password.
+5. Run `npm install`.
+6. Run `npm run dev` to start both the Vite app and the mail server.
+
+Environment variables:
+
+```bash
+GMAIL_USER=youraddress@gmail.com
+GMAIL_APP_PASSWORD=your-16-character-app-password
+CONTACT_TO_EMAIL=smjaffarh@gmail.com
+VITE_CONTACT_API_URL=/api/contact
+PORT=3001
+```
+
+Notes:
+
+- `CONTACT_TO_EMAIL` is optional. If omitted, mail is sent to `smjaffarh@gmail.com` by default.
+- If you deploy the frontend and backend separately, set `VITE_CONTACT_API_URL` to the full backend URL.
+- Never commit your real `.env` file.
+
+## Deployment (Vercel)
+
+This repo now includes a production API endpoint at `/api/contact` for Vercel.
+
+1. Import this repository into Vercel.
+2. In Vercel Project Settings -> Environment Variables, add:
+   - `GMAIL_USER`
+   - `GMAIL_APP_PASSWORD`
+   - `CONTACT_TO_EMAIL` (set this to `smjaffarh@gmail.com`)
+3. Deploy.
+
+After deploy, the contact form will send requests to `/api/contact` on your deployed domain and emails will be sent to `smjaffarh@gmail.com`.
+
 ## Student Setup (Must Update)
 
 Replace all placeholders below before your first submission.

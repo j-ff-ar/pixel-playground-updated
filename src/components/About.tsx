@@ -23,7 +23,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <span className="font-mono text-sm text-primary mb-2 block">// about me</span>
+          <span className="font-mono text-sm text-primary mb-2 block"></span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             README<span className="text-primary">.md</span>
           </h2>

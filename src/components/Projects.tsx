@@ -15,9 +15,9 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <span className="font-mono text-sm text-primary mb-2 block">// projects</span>
+          <span className="font-mono text-sm text-primary mb-2 block"></span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Pinned <span className="text-primary">Repositories</span>
+            My <span className="text-primary">Repositories</span>
           </h2>
         </motion.div>
 
