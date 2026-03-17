@@ -35,8 +35,7 @@ const Hero = () => {
   }, [displayText, isDeleting, roleIndex]);
 
   // Generate contribution grid
-  const contributionData = Array.from({ length: 52 * 7 }, () =>
-    Math.random()
+  const contributionData = Array.from({ length: 52 * 7 }, () =>    Math.random()
   );
 
   const getContributionColor = (value: number) => {

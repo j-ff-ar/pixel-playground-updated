@@ -23,6 +23,12 @@ git branch
 git switch -c feature/<your-task-name>
 ```
 
+## Deployment Guide
+
+To publish your profile publicly for free, follow:
+
+- [Netlify Deployment Guide](./NETLIFY_DEPLOYMENT.md)
+
 ## Student Setup (Must Update)
 
 Replace all placeholders below before your first submission.
