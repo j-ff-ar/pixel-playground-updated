@@ -25,7 +25,7 @@ export const experiences: Experience[] = [
     period: "",
     location: "",
     points: [
-      "Lodaing......",
+      "Lodaing...",
     ],
   },
   

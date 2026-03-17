@@ -1,19 +1,45 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Send, Mail, MapPin, Github, Phone, Linkedin } from "lucide-react";
+import { toast } from "@/components/ui/sonner";
 
 const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [formState, setFormState] = useState({ name: "", email: "", message: "" });
+  const [formState, setFormState] = useState({ name: "", email: "", message: "", website: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    console.log("Form submitted:", formState);
-    setTimeout(() => setSubmitted(false), 3000);
-    setFormState({ name: "", email: "", message: "" });
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(import.meta.env.VITE_CONTACT_API_URL || "/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
+      });
+
+      const result = (await response.json().catch(() => null)) as { error?: string } | null;
+
+      if (!response.ok) {
+        throw new Error(result?.error || "Failed to send your message.");
+      }
+
+      setSubmitted(true);
+      toast.success("Message sent. Check your Gmail inbox.");
+      setFormState({ name: "", email: "", message: "", website: "" });
+      window.setTimeout(() => setSubmitted(false), 3000);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Failed to send your message.";
+      toast.error(message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -25,9 +51,9 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <span className="font-mono text-sm text-primary mb-2 block">// contact</span>
+          <span className="font-mono text-sm text-primary mb-2 block"></span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Get In <span className="text-primary">Touch</span>
+            Get In <span className="text-primary"></span>
           </h2>
         </motion.div>
 
@@ -62,7 +88,7 @@ const Contact = () => {
               {[
                 { icon: Github, href: "https://github.com/j-ff-ar", label: "GitHub" },
                 { icon: Mail, href: "mailto:smjaffarh@gmail.com", label: "Email" },
-                { icon: Linkedin, href: "www.linkedin.com/in/syed-muhammad-jaffar-tayyar-282506253", label: "LinkedIn" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/smjaffart", label: "LinkedIn" },
               ].map((social) => (
                 <a
                   key={social.label}
@@ -117,11 +143,23 @@ const Contact = () => {
                 placeholder="Let's talk about..."
               />
             </div>
+            <input
+              type="text"
+              name="website"
+              value={formState.website}
+              onChange={(e) => setFormState({ ...formState, website: e.target.value })}
+              style={{ display: "none" }}
+              tabIndex={-1}
+              autoComplete="off"
+            />
             <button
               type="submit"
+              disabled={isSubmitting}
               className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-all github-glow-green"
             >
-              {submitted ? (
+              {isSubmitting ? (
+                "Sending..."
+              ) : submitted ? (
                 "Message Sent! ✓"
               ) : (
                 <>
