@@ -1,6 +1,5 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Star, GitFork, ExternalLink } from "lucide-react";
 import { projects } from "@/data/projects";
 
 const Projects = () => {
@@ -24,9 +23,8 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {projects.map((project, index) => (
-            <motion.a
+            <motion.div
               key={project.id}
-              href={project.link}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 + index * 0.1 }}
@@ -40,7 +38,6 @@ const Projects = () => {
                   </svg>
                   <span className="font-semibold text-accent group-hover:underline">{project.title}</span>
                 </div>
-                <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
 
               {/* Description */}
@@ -69,16 +66,8 @@ const Projects = () => {
                   />
                   {project.language}
                 </span>
-                <span className="flex items-center gap-1">
-                  <Star className="w-3.5 h-3.5" />
-                  {project.stars.toLocaleString()}
-                </span>
-                <span className="flex items-center gap-1">
-                  <GitFork className="w-3.5 h-3.5" />
-                  {project.forks}
-                </span>
               </div>
-            </motion.a>
+            </motion.div>
           ))}
         </div>
       </div>

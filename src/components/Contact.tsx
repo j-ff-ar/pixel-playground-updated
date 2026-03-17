@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Send, Mail, MapPin, Github, Phone } from "lucide-react";
+import { Send, Mail, MapPin, Github, Phone, Linkedin } from "lucide-react";
 
 const Contact = () => {
   const ref = useRef(null);
@@ -11,6 +11,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+    console.log("Form submitted:", formState);
     setTimeout(() => setSubmitted(false), 3000);
     setFormState({ name: "", email: "", message: "" });
   };
@@ -31,7 +32,7 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Info side */}
+          {}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -45,11 +46,11 @@ const Contact = () => {
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-3 text-muted-foreground">
                 <Mail className="w-5 h-5 text-primary" />
-                <span className="font-mono">najamabass2020@gmail.com</span>
+                <span className="font-mono">smjaffarh@gmail.com</span>
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="w-5 h-5 text-primary" />
-                <span className="font-mono">+92-317-3036098</span>
+                <span className="font-mono">+92-315-5091391</span>
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <MapPin className="w-5 h-5 text-primary" />
@@ -59,8 +60,9 @@ const Contact = () => {
 
             <div className="flex gap-4">
               {[
-                { icon: Github, href: "https://github.com/ctoic", label: "GitHub" },
-                { icon: Mail, href: "mailto:najamabass2020@gmail.com", label: "Email" },
+                { icon: Github, href: "https://github.com/j-ff-ar", label: "GitHub" },
+                { icon: Mail, href: "mailto:smjaffarh@gmail.com", label: "Email" },
+                { icon: Linkedin, href: "www.linkedin.com/in/syed-muhammad-jaffar-tayyar-282506253", label: "LinkedIn" },
               ].map((social) => (
                 <a
                   key={social.label}
@@ -74,7 +76,7 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Form */}
+          {}
           <motion.form
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}

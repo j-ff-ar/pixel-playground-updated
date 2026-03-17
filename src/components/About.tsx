@@ -8,10 +8,10 @@ const About = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const highlights = [
-    { icon: Briefcase, label: "SDLC Ownership", desc: "Managing full lifecycle from documentation to deployment" },
-    { icon: Users, label: "Stakeholder Alignment", desc: "Bridging business, product, engineering, and QA teams" },
-    { icon: BarChart3, label: "KPI Driven", desc: "Using customer feedback and metrics to guide priorities" },
-    { icon: Workflow, label: "Agile Delivery", desc: "Running Scrum ceremonies and sprint planning effectively" },
+    { icon: Briefcase, label: "WEB-DEVELOPER", desc: "Learning and Creating responsive and user-friendly web applications" },
+    { icon: Users, label: "FLASK DEVELOPER", desc: "Learning and Building Intelligent  Web Applications Integrated with AI" },
+    { icon: BarChart3, label: "MySQL, PostgreSQL", desc: "Learning and Managing Database Systems" },
+    
   ];
 
   return (
@@ -44,21 +44,20 @@ const About = () => {
               </div>
               <div className="space-y-4 font-mono text-sm leading-relaxed">
                 <p className="text-muted-foreground">
-                  <span className="text-primary"># </span>
-                  <span className="text-foreground font-semibold">Hello, I'm Syed Muhammad Jaffar Tayyar</span>
+                  <span className="text-primary"> </span>
+                  <span className="text-foreground font-semibold">Hello, I'm Syed Muhammad Jaffar Tayyar </span>
                 </p>
                 <p className="text-muted-foreground">
-                  Project management professional with 2+ years of experience supporting
-                  Scrum framework and agile practices in cross-functional teams.
+                  4th semester Computer Science student with a strong interest in software development and AI.
+                  Skilled in HTML, CSS, JavaScript for front-end development.
                 </p>
                 <p className="text-muted-foreground">
-                  Proven track record in product strategy execution, user story development,
-                  acceptance criteria definition, and full SDLC oversight.
+                  Worked in C++, Java,Flask, MySQL,PostgreSql and ML for problem-solving and application development as a part of my academic journey.
+                  
                 </p>
                 <p className="text-muted-foreground">
-                  Delivered <span className="text-primary">10+ projects</span> while managing
-                  multiple concurrent initiatives, using tools like Jira, Asana, and Zapier
-                  to keep delivery predictable and high quality.
+                  Delivered <span className="text-primary">4+ projects</span> while managing
+                  multiple other acitivities in university,keeping myself mentally and physically fit. 
                 </p>
               </div>
             </div>
