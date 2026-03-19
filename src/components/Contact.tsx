@@ -53,7 +53,7 @@ const Contact = () => {
         >
           <span className="font-mono text-sm text-primary mb-2 block"></span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Get In <span className="text-primary"></span>
+            Get In <span className="text-primary">Touch</span>
           </h2>
         </motion.div>
 
@@ -65,8 +65,8 @@ const Contact = () => {
             transition={{ delay: 0.2 }}
           >
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              I'm open to project management, business analysis, and technical product roles.
-              Reach out if you're building products that need strong delivery execution.
+              I’m open to opportunities in software development, project collaboration, and technical roles.
+              Feel free to connect if you’re building projects that need dedicated execution and problem-solving.
             </p>
 
             <div className="space-y-4 mb-8">

@@ -17,7 +17,7 @@ const Projects = () => {
         >
           <span className="font-mono text-sm text-primary mb-2 block"></span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            My <span className="text-primary">Repositories</span>
+            Key <span className="text-primary">Projects</span>
           </h2>
         </motion.div>
 

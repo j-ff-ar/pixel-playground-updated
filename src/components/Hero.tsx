@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, GitBranch, Terminal } from "lucide-react";
 
-const roles = ["Energetic Leader", "AI/ML Enthusiast", "Developer",];
+const roles = ["Developer", "AI/ML Enthusiast", "Energetic Leader",];
 
 const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -34,7 +34,7 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, roleIndex]);
 
-  // Generate contribution grid
+ 
   const contributionData = Array.from({ length: 52 * 7 }, () =>
     Math.random()
   );
@@ -114,7 +114,7 @@ const Hero = () => {
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-all github-glow-green"
               >
                 <GitBranch className="w-4 h-4" />
-                View Repositories
+                View Projects
               </a>
               <a
                 href="#contact"

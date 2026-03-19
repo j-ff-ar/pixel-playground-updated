@@ -48,7 +48,7 @@ const About = () => {
                   <span className="text-foreground font-semibold">Hello, I'm Syed Muhammad Jaffar Tayyar </span>
                 </p>
                 <p className="text-muted-foreground">
-                  4th semester Computer Science student with a strong interest in software development and AI.
+                  A 4th semester Computer Science student with a strong interest in software development and AI.
                   Skilled in HTML, CSS, JavaScript for front-end development.
                 </p>
                 <p className="text-muted-foreground">
